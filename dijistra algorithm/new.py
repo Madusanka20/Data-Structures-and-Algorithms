@@ -168,6 +168,35 @@ if __name__=='__main__':
     # a=agent(myMaze,color=COLOR.cyan,filled=True,footprints=True)
     a=agent(myMaze,20,10,color=COLOR.cyan,filled=True,footprints=True)
     myMaze.tracePath({a:path})
+
+    # path,c=dijstra(myMaze,h1,h2,h2,h3,h4,h5)
+    path,c=dijkstra(myMaze,red_agents,blue_agents,yellow_agents,start=(6,14),goal=(16,7))
+    textLabel(myMaze,'Total Cost',c)
+
+    # a=agent(myMaze,color=COLOR.cyan,filled=True,footprints=True)
+    a=agent(myMaze,6,14,color=COLOR.yellow,filled=True,footprints=True)
+    myMaze.tracePath({a:path})
+
+    # path,c=dijstra(myMaze,h1,h2,h2,h3,h4,h5)
+    path,c=dijkstra(myMaze,red_agents,blue_agents,yellow_agents,start=(16,7),goal=(17,19))
+    textLabel(myMaze,'Total Cost',c)
+
+    # a=agent(myMaze,color=COLOR.cyan,filled=True,footprints=True)
+    a=agent(myMaze,16,7,color=COLOR.green,filled=True,footprints=True)
+    myMaze.tracePath({a:path})
+
+    # path,c=dijstra(myMaze,h1,h2,h2,h3,h4,h5)
+    path,c=dijkstra(myMaze,red_agents,blue_agents,yellow_agents,start=(17,19),goal=(20,10))
+    textLabel(myMaze,'Total Cost',c)
+
+    # a=agent(myMaze,color=COLOR.cyan,filled=True,footprints=True)
+    a=agent(myMaze,17,19,color=COLOR.red,filled=True,footprints=True)
+    myMaze.tracePath({a:path})
+
+    
+
+
+
     # Green agents (Survivors)
     s1 = agent(myMaze, 6, 14, color='green')
     s2 = agent(myMaze, 16, 7, color='green')
